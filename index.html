@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="custom-scrollbar">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skateboard Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Goggle Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <!-- Boxicon library -->
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' >
+  </head>
+  <body>
+    <aside id="sidebarArea" class="sidebar custom-scrollbar">
+      <div class="sidebar__inner custom-scrollbar">
+        <header class="sidebar__header">
+          <h1 class="sidebar__logo-handle sidebar__logo-handle--m">
+            <a href="#" class="sidebar__logo" aria-label="skateboard">s</a>
+          </h1>
+          <h1 class="sidebar__logo-handle sidebar__logo-handle--d">
+            <a href="#" id="logoText" class="sidebar__logo">skateboard</a>
+          </h1>
+
+          <button type="button" id="openMenuBtn" class="sidebar__toggle-menu toggle-menu" aria-labelledby="toggleMenuText" aria-expanded="false" aria-haspopup="true">
+            <span id="toggleMenuText" class="visually-hidden">Toggle Navigation Menu</span>
+
+            <div class="toggle-menu__hamburger hamburger">
+              <div class="hamburger__item"></div>
+              <div class="hamburger__item"></div>
+              <div class="hamburger__item"></div>
+            </div>
+          </button>
+        </header>
+
+        <nav class="sidebar__nav nav" aria-labelledby="navTitle-1">
+          <small id="navTitle-1" class="nav__title visually-hidden--extra">Menu</small>
+  
+          <ul class="sidebar__menu menu" role="menu">
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link menu__link--active" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M5.0936 12.8495V10.811C5.0936 10.2906 5.51853 9.86876 6.0427 9.86876L7.95882 9.86876C8.21054 9.86876 8.45195 9.96803 8.62994 10.1447C8.80793 10.3214 8.90792 10.5611 8.90792 10.811V12.8495C8.90633 13.0658 8.99179 13.2738 9.14533 13.4273C9.29886 13.5809 9.50778 13.6672 9.72571 13.6672H11.033C11.6435 13.6688 12.2296 13.4291 12.6619 13.0011C13.0941 12.5731 13.3371 11.9919 13.3371 11.3858V5.57847C13.3371 5.08887 13.1185 4.62445 12.7402 4.31034L8.2931 0.784472C7.51952 0.166267 6.41115 0.186228 5.66067 0.831879L1.31509 4.31034C0.918904 4.61519 0.682112 5.08098 0.67041 5.57847V11.3799C0.67041 12.6431 1.702 13.6672 2.97453 13.6672H4.25194C4.70456 13.6672 5.07241 13.3047 5.07569 12.8554L5.0936 12.8495Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Discover</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 8" aria-hidden="true">
+                  <path d="M5.22708 4.00456L5.22809 4.24062C5.2362 5.17694 5.29264 6.01233 5.38999 6.54174C5.38999 6.55128 5.49617 7.07634 5.5638 7.25112C5.66998 7.50373 5.86198 7.71816 6.1027 7.85402C6.29543 7.95095 6.49761 8.00015 6.70924 8.00015C6.8756 7.99244 7.14996 7.90873 7.34578 7.83854L7.5085 7.77618C8.58631 7.34805 10.6466 5.94912 11.4357 5.0936L11.4939 5.0338L11.7535 4.75359C11.9172 4.53917 12.0037 4.277 12.0037 3.99501C12.0037 3.7424 11.9266 3.48978 11.7725 3.28563C11.7263 3.21949 11.6519 3.13464 11.5858 3.06294L11.3331 2.79841C10.4634 1.9173 8.58049 0.681373 7.6045 0.271862C7.6045 0.26305 6.99797 0.00969913 6.70924 0.000152588L6.6707 0.000152588C6.22779 0.000152588 5.81398 0.252769 5.60235 0.661067C5.54453 0.772688 5.48907 0.99134 5.44689 1.18337L5.37108 1.54596C5.28453 2.12903 5.22708 3.02347 5.22708 4.00456ZM1.00589 2.98793C0.452445 2.98793 0.00372314 3.44102 0.00372314 3.99986C0.00372314 4.5587 0.452445 5.01179 1.00589 5.01179L3.47204 4.79369C3.90622 4.79369 4.25822 4.439 4.25822 3.99986C4.25822 3.56145 3.90622 3.20603 3.47204 3.20603L1.00589 2.98793Z"/>
+                </svg>                              
+                <span class="menu__text visually-hidden--extra">Trending</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M6.48696 3.86051V1.18783C6.48696 0.903644 6.71362 0.666824 7.00029 0.666824C7.25696 0.666824 7.47441 0.865819 7.50887 1.11788L7.51362 1.18783V3.86051L10.7002 3.86071C12.2869 3.86071 13.5905 5.16001 13.6636 6.78043L13.6669 6.92422V10.2838C13.6669 11.9155 12.4087 13.255 10.8456 13.3302L10.7069 13.3335L3.29356 13.3335C1.70689 13.3335 0.409617 12.0407 0.336782 10.4143L0.333557 10.27L0.333557 6.91733C0.333557 5.28556 1.5855 3.93963 3.14822 3.86406L3.28689 3.86071L6.48689 3.86071V8.12897L5.42022 7.02748C5.22022 6.82095 4.89356 6.82095 4.69356 7.02748C4.59356 7.13075 4.54689 7.26843 4.54689 7.40612C4.54689 7.51076 4.57676 7.61981 4.6399 7.71211L4.69356 7.77787L6.63356 9.78808C6.72689 9.89135 6.86022 9.94642 7.00022 9.94642C7.11133 9.94642 7.22245 9.90818 7.31041 9.83567L7.36022 9.78808L9.30022 7.77787C9.50022 7.57134 9.50022 7.23401 9.30022 7.02748C9.11841 6.83973 8.8319 6.82266 8.63105 6.97628L8.57356 7.02748L7.51356 8.12897V3.86071L6.48696 3.86051Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Streaming</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M6.10546 10.094L7.99985 8.18069C8.19127 7.98069 8.19127 7.66736 7.99325 7.47403C7.80183 7.28069 7.4916 7.28069 7.30018 7.47403L6.25067 8.54069V5.32736C6.25067 5.04736 6.03285 4.82736 5.76222 4.82736C5.4916 4.82736 5.26717 5.04736 5.26717 5.32736V8.54069L4.21767 7.47403C4.02625 7.28069 3.71602 7.28069 3.5246 7.47403C3.33318 7.66736 3.33318 7.98069 3.5246 8.18069L5.41239 10.094C5.45859 10.1407 5.5114 10.174 5.5708 10.2007C5.63021 10.2274 5.69622 10.2407 5.76222 10.2407C5.82823 10.2407 5.88764 10.2274 5.94704 10.2007C6.00645 10.174 6.05925 10.1407 6.10546 10.094ZM10.8885 5.01777C11.0437 5.01598 11.2126 5.01403 11.3661 5.01403C11.5377 5.01403 11.6698 5.14736 11.6698 5.31403V10.674C11.6698 12.3274 10.3364 13.6674 8.69946 13.6674L3.45194 13.6674C1.72917 13.6674 0.336426 12.2607 0.336426 10.5274V3.3407C0.336426 1.68736 1.66316 0.33403 3.31332 0.33403L6.83808 0.33403C7.00309 0.33403 7.14171 0.47403 7.14171 0.640697V2.78736C7.14171 4.00736 8.13181 5.00736 9.34633 5.01403C9.62529 5.01403 9.87491 5.01615 10.0928 5.01799C10.2616 5.01943 10.4114 5.0207 10.541 5.0207C10.635 5.0207 10.7568 5.01929 10.8885 5.01777ZM11.0728 4.04477C10.5309 4.04677 9.89132 4.04477 9.43125 4.0401C8.70122 4.0401 8.0999 3.43277 8.0999 2.69543V0.938101C8.0999 0.650768 8.44511 0.508101 8.64181 0.715434C9.15034 1.24899 9.92893 2.06679 10.5868 2.7578C10.8529 3.03726 11.0992 3.29598 11.2999 3.50677C11.4926 3.70877 11.3514 4.0441 11.0728 4.04477Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Playlist</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M10.8461 3.58767L13.6669 3.58767C13.6669 1.32286 12.3099 -0.000198364 10.0106 -0.000198364L3.98985 -0.000198364C1.69059 -0.000198364 0.333557 1.32286 0.333557 3.55878V8.44082C0.333557 10.6767 1.69059 11.9998 3.98985 11.9998L10.0106 11.9998C12.3099 11.9998 13.6669 10.6767 13.6669 8.44082V8.23283L10.8461 8.23283C9.53703 8.23283 8.47578 7.19815 8.47578 5.9218C8.47578 4.64546 9.53703 3.61078 10.8461 3.61078V3.58767ZM10.8449 4.58144L13.1679 4.58144C13.4428 4.58144 13.6656 4.79872 13.6656 5.06675V6.7538C13.6624 7.02053 13.4414 7.236 13.1679 7.23912L10.8982 7.23912C10.2355 7.24781 9.65597 6.80541 9.50564 6.17604C9.43036 5.78536 9.53604 5.38221 9.79436 5.07464C10.0527 4.76707 10.4372 4.58654 10.8449 4.58144ZM10.9486 6.35523H11.1679C11.4493 6.35523 11.6775 6.13277 11.6775 5.85836C11.6775 5.58394 11.4493 5.36149 11.1679 5.36149H10.9486C10.814 5.35994 10.6844 5.411 10.5886 5.50326C10.4929 5.59553 10.439 5.72133 10.439 5.85258C10.439 6.12794 10.6662 6.35206 10.9486 6.35523ZM3.49307 3.58804L7.25603 3.58804C7.53749 3.58804 7.76566 3.36559 7.76566 3.09117C7.76566 2.81676 7.53749 2.5943 7.25603 2.5943L3.49307 2.5943C3.21391 2.59428 2.98668 2.81324 2.98344 3.08539C2.98342 3.36076 3.21065 3.58488 3.49307 3.58804Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Bookmark</span>
+              </a>
+            </li>
+          </ul>
+          <hr class="separator-line">
+        </nav>
+        <nav class="sidebar__nav nav" aria-labelledby="navTitle-2">
+          <small id="navTitle-2" class="nav__title visually-hidden--extra">Category</small>
+  
+          <ul class="sidebar__menu menu" role="menu">
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M5.0936 12.8495V10.811C5.0936 10.2906 5.51853 9.86876 6.0427 9.86876L7.95882 9.86876C8.21054 9.86876 8.45195 9.96803 8.62994 10.1447C8.80793 10.3214 8.90792 10.5611 8.90792 10.811V12.8495C8.90633 13.0658 8.99179 13.2738 9.14533 13.4273C9.29886 13.5809 9.50778 13.6672 9.72571 13.6672H11.033C11.6435 13.6688 12.2296 13.4291 12.6619 13.0011C13.0941 12.5731 13.3371 11.9919 13.3371 11.3858V5.57847C13.3371 5.08887 13.1185 4.62445 12.7402 4.31034L8.2931 0.784472C7.51952 0.166267 6.41115 0.186228 5.66067 0.831879L1.31509 4.31034C0.918904 4.61519 0.682112 5.08098 0.67041 5.57847V11.3799C0.67041 12.6431 1.702 13.6672 2.97453 13.6672H4.25194C4.70456 13.6672 5.07241 13.3047 5.07569 12.8554L5.0936 12.8495Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Live Stream</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 8" aria-hidden="true">
+                  <path d="M5.22708 4.00456L5.22809 4.24062C5.2362 5.17694 5.29264 6.01233 5.38999 6.54174C5.38999 6.55128 5.49617 7.07634 5.5638 7.25112C5.66998 7.50373 5.86198 7.71816 6.1027 7.85402C6.29543 7.95095 6.49761 8.00015 6.70924 8.00015C6.8756 7.99244 7.14996 7.90873 7.34578 7.83854L7.5085 7.77618C8.58631 7.34805 10.6466 5.94912 11.4357 5.0936L11.4939 5.0338L11.7535 4.75359C11.9172 4.53917 12.0037 4.277 12.0037 3.99501C12.0037 3.7424 11.9266 3.48978 11.7725 3.28563C11.7263 3.21949 11.6519 3.13464 11.5858 3.06294L11.3331 2.79841C10.4634 1.9173 8.58049 0.681373 7.6045 0.271862C7.6045 0.26305 6.99797 0.00969913 6.70924 0.000152588L6.6707 0.000152588C6.22779 0.000152588 5.81398 0.252769 5.60235 0.661067C5.54453 0.772688 5.48907 0.99134 5.44689 1.18337L5.37108 1.54596C5.28453 2.12903 5.22708 3.02347 5.22708 4.00456ZM1.00589 2.98793C0.452445 2.98793 0.00372314 3.44102 0.00372314 3.99986C0.00372314 4.5587 0.452445 5.01179 1.00589 5.01179L3.47204 4.79369C3.90622 4.79369 4.25822 4.439 4.25822 3.99986C4.25822 3.56145 3.90622 3.20603 3.47204 3.20603L1.00589 2.98793Z"/>
+                </svg>                              
+                <span class="menu__text visually-hidden--extra">Tutorial</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M6.48696 3.86051V1.18783C6.48696 0.903644 6.71362 0.666824 7.00029 0.666824C7.25696 0.666824 7.47441 0.865819 7.50887 1.11788L7.51362 1.18783V3.86051L10.7002 3.86071C12.2869 3.86071 13.5905 5.16001 13.6636 6.78043L13.6669 6.92422V10.2838C13.6669 11.9155 12.4087 13.255 10.8456 13.3302L10.7069 13.3335L3.29356 13.3335C1.70689 13.3335 0.409617 12.0407 0.336782 10.4143L0.333557 10.27L0.333557 6.91733C0.333557 5.28556 1.5855 3.93963 3.14822 3.86406L3.28689 3.86071L6.48689 3.86071V8.12897L5.42022 7.02748C5.22022 6.82095 4.89356 6.82095 4.69356 7.02748C4.59356 7.13075 4.54689 7.26843 4.54689 7.40612C4.54689 7.51076 4.57676 7.61981 4.6399 7.71211L4.69356 7.77787L6.63356 9.78808C6.72689 9.89135 6.86022 9.94642 7.00022 9.94642C7.11133 9.94642 7.22245 9.90818 7.31041 9.83567L7.36022 9.78808L9.30022 7.77787C9.50022 7.57134 9.50022 7.23401 9.30022 7.02748C9.11841 6.83973 8.8319 6.82266 8.63105 6.97628L8.57356 7.02748L7.51356 8.12897V3.86071L6.48696 3.86051Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Competition</span>
+              </a>
+            </li>
+            <li class="menu__item" role="none">
+              <a href="#" class="menu__link" role="menuitem">
+                <svg class="menu__icon" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M6.10546 10.094L7.99985 8.18069C8.19127 7.98069 8.19127 7.66736 7.99325 7.47403C7.80183 7.28069 7.4916 7.28069 7.30018 7.47403L6.25067 8.54069V5.32736C6.25067 5.04736 6.03285 4.82736 5.76222 4.82736C5.4916 4.82736 5.26717 5.04736 5.26717 5.32736V8.54069L4.21767 7.47403C4.02625 7.28069 3.71602 7.28069 3.5246 7.47403C3.33318 7.66736 3.33318 7.98069 3.5246 8.18069L5.41239 10.094C5.45859 10.1407 5.5114 10.174 5.5708 10.2007C5.63021 10.2274 5.69622 10.2407 5.76222 10.2407C5.82823 10.2407 5.88764 10.2274 5.94704 10.2007C6.00645 10.174 6.05925 10.1407 6.10546 10.094ZM10.8885 5.01777C11.0437 5.01598 11.2126 5.01403 11.3661 5.01403C11.5377 5.01403 11.6698 5.14736 11.6698 5.31403V10.674C11.6698 12.3274 10.3364 13.6674 8.69946 13.6674L3.45194 13.6674C1.72917 13.6674 0.336426 12.2607 0.336426 10.5274V3.3407C0.336426 1.68736 1.66316 0.33403 3.31332 0.33403L6.83808 0.33403C7.00309 0.33403 7.14171 0.47403 7.14171 0.640697V2.78736C7.14171 4.00736 8.13181 5.00736 9.34633 5.01403C9.62529 5.01403 9.87491 5.01615 10.0928 5.01799C10.2616 5.01943 10.4114 5.0207 10.541 5.0207C10.635 5.0207 10.7568 5.01929 10.8885 5.01777ZM11.0728 4.04477C10.5309 4.04677 9.89132 4.04477 9.43125 4.0401C8.70122 4.0401 8.0999 3.43277 8.0999 2.69543V0.938101C8.0999 0.650768 8.44511 0.508101 8.64181 0.715434C9.15034 1.24899 9.92893 2.06679 10.5868 2.7578C10.8529 3.03726 11.0992 3.29598 11.2999 3.50677C11.4926 3.70877 11.3514 4.0441 11.0728 4.04477Z"/>
+                </svg>
+                <span class="menu__text visually-hidden--extra">Community</span>
+              </a>
+            </li>
+          </ul>
+          <hr class="separator-line">
+        </nav>
+        
+        <fieldset class="toggle" role="radiogroup" aria-label="theme switcher">
+          <div class="toggle__wrapper">
+            <input type="radio" name="theme" id="lightRadio" class="toggle__radio-inp toggle__radio-inp--light">
+            <input type="radio" name="theme" id="nightRadio" class="toggle__radio-inp toggle__radio-inp--night" checked>
+            <span aria-hidden="true" class="toggle__background"></span>
+            <span aria-hidden="true" class="toggle__circle"></span>
+  
+            <label for="lightRadio" class="toggle__label toggle__label--light visually-hidden--extra">Light mode</label>
+            <label for="nightRadio" class="toggle__label toggle__label--night visually-hidden--extra">Night mode</label>
+          </div>
+        </fieldset>
+
+        <div class="sidebar__overlay"></div>
+      </div>
+    </aside>
+
+    <main id="main" class="main">
+      <header class="header">
+        <div class="header__search">
+          <label class="visually-hidden" for="search">Search about something related with skateboard</label>
+          <input type="text" name="search" id="search" class="header-search__input" placeholder="Search">
+
+          <button class="header-search__btn">
+            <svg class="header-search__search-icon" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <g opacity="0.5">
+              <path d="M5.91314 10.8263C8.6266 10.8263 10.8263 8.6266 10.8263 5.91314C10.8263 3.19969 8.6266 1 5.91314 1C3.19969 1 1 3.19969 1 5.91314C1 8.6266 3.19969 10.8263 5.91314 10.8263Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.7193 9.71889L12.8074 12.807"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </button>
+        </div>
+
+        <div class="header__user-settings">
+          <button class="user-settings__user-menu-btn" aria-label="user list" aria-expanded="false">
+            <img src="images/img-4.svg" alt="user avatar" class="user-settings__img">
+            <span class="user-settings__name">
+              Thomas
+              <svg class="user-settings__down-arrow" viewBox="0 0 13 8" aria-hidden="true">
+                <path d="M5.99997 7.09418L11.0083 2.08584L9.8308 0.906677L5.99997 4.74001L2.16997 0.906677L0.991638 2.08501L5.99997 7.09418Z" />
+              </svg>
+            </span>
+          </button>
+          <button class="user-settings__notification-button" aria-label="notification icon that opens notifications" aria-expanded="false">
+            <svg class="user-settings__notification" viewBox="0 0 20 23" fill="none" aria-hidden="true">
+              <path d="M15.5892 10.3303C15.5892 11.3769 15.8659 11.9938 16.4746 12.7047C16.9359 13.2284 17.0834 13.9007 17.0834 14.63C17.0834 15.3585 16.844 16.0501 16.3645 16.6116C15.7367 17.2847 14.8513 17.7144 13.9477 17.7891C12.6383 17.9008 11.3281 17.9948 10.0004 17.9948C8.67197 17.9948 7.36256 17.9385 6.05315 17.7891C5.14873 17.7144 4.26337 17.2847 3.63641 16.6116C3.15687 16.0501 2.91669 15.3585 2.91669 14.63C2.91669 13.9007 3.06494 13.2284 3.52543 12.7047C4.15322 11.9938 4.41162 11.3769 4.41162 10.3303V9.97524C4.41162 8.57361 4.76113 7.65709 5.48085 6.75988C6.55091 5.4514 8.26615 4.66666 9.96316 4.66666H10.0377C11.7712 4.66666 13.5419 5.48917 14.5937 6.85388C15.2762 7.73263 15.5892 8.61054 15.5892 9.97524V10.3303ZM7.5614 19.7174C7.5614 19.2977 7.94652 19.1055 8.30266 19.0233C8.71925 18.9351 11.2577 18.9351 11.6743 19.0233C12.0305 19.1055 12.4156 19.2977 12.4156 19.7174C12.3949 20.1169 12.1605 20.4711 11.8367 20.696C11.4168 21.0233 10.924 21.2306 10.4088 21.3053C10.1239 21.3423 9.84397 21.3431 9.569 21.3053C9.05302 21.2306 8.56023 21.0233 8.14115 20.6952C7.81649 20.4711 7.58211 20.1169 7.5614 19.7174Z" fill="#808191"/>
+              <circle cx="15" cy="4.77783" r="3.6" fill="#EC5252" stroke="#1E2127" stroke-width="1.2"/>
+            </svg>   
+          </button>
+        </div>
+      </header>
+
+      <section class="discover-area">
+        <h1 class="discover-area__title">Discover</h1>
+
+        <div class="discover-area__blogs">
+          <div class="discover-area__blog discover-area__blog--first">
+            <a href="#" class="discover-area__blog-title">How to do Basic Jumping and how to landing safely</a>
+
+            <div class="discover-area__blog-author">
+              <div class="discover-area__blog-author-details">
+                <span class="discover-area__blog-author-name">Thomas Hope</span>
+                <span class="discover-area__blog-author-info">53K views • 2 weeks ago</span>
+              </div>
+
+              <div class="discover-area__blog-author-img-wrapper">
+                <svg viewBox="0 0 16 16" fill="none" class="discover-area__blog-author-verified " aria-hidden="true">
+                  <rect x="1" y="1" width="14" height="14" rx="7" fill="white" stroke="#0DAABC" stroke-width="2"/>
+                  <path d="M6.17157 8.32843L7.58579 9.74264L10.4142 6.91421" stroke="#0DAABC" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+
+                <img src="images/img-1.jpg" alt="author avatar" class="discover-area__blog-author-img">
+              </div>
+            </div>
+            <div class="discover-area__blog-time time-bagde">7 min</div>
+          </div>
+          <div class="discover-area__blog discover-area__blog--second">
+            <a href="#" class="discover-area__blog-title">Skateboard Tips You need to know</a>
+
+            <div class="discover-area__blog-author">
+              <div class="discover-area__blog-author-details">
+                <span class="discover-area__blog-author-name">Tony Andrew</span>
+                <span class="discover-area__blog-author-info">53K views • 2 weeks ago</span>
+              </div>
+
+              <div class="discover-area__blog-author-img-wrapper">
+                <svg viewBox="0 0 16 16" fill="none" class="discover-area__blog-author-verified" aria-hidden="true">
+                  <rect x="1" y="1" width="14" height="14" rx="7" fill="white" stroke="#E6B97A" stroke-width="2"/>
+                  <path d="M6.17157 8.32843L7.58579 9.74264L10.4142 6.91421" stroke="#D9A45A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  
+                <img src="images/img-5.svg" alt="author avatar" class="discover-area__blog-author-img">
+              </div>
+            </div>
+            <div class="discover-area__blog-time time-bagde">10 min</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards">
+        <h1 class="cards__title">Most Watched</h1>
+
+        <div class="cards__wrapper">
+          <div class="cards__card">
+            <div class="card__top">
+              <img src="images/img-10.svg" alt="card thumbnail " class="card__image">
+              <span class="card__time time-bagde">7 min</span>
+            </div>
+
+            <div class="card__body">
+              <div class="card__author">
+                <div class="card__author-name">
+                  Andy Williom
+                  <span class="card__author-status card__author-status--online"></span>
+                </div>
+
+                <div class="card__author-img-wrapper">
+                  <svg viewBox="0 0 16 16" fill="none" class="card__author-verified" aria-hidden="true">
+                    <rect x="1" y="1" width="14" height="14" rx="7" fill="#08A0F7" stroke="#252836" stroke-width="2"/>
+                    <path d="M6.17157 8.32843L7.58579 9.74264L10.4142 6.91421" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+
+                  <img src="images/img-6.svg" alt="author avatar" class="card__author-img">
+                </div>
+              </div>
+
+              <a href="#" class="card__title">Basic how to ride your skateboard comfortly</a>
+              <span class="card__info">53K views • 2 weeks ago</span>
+            </div>
+          </div>
+
+          <div class="cards__card">
+            <div class="card__top">
+              <img src="images/img-11.svg" alt="card thumbnail" class="card__image">
+              <span class="card__time time-bagde">9 min</span>
+            </div>
+
+            <div class="card__body">
+              <div class="card__author">
+                <div class="card__author-name">
+                  Johny Wise
+                  <span class="card__author-status"></span>
+                </div>
+
+                <div class="card__author-img-wrapper">
+                  <svg viewBox="0 0 16 16" fill="none" class="card__author-verified" aria-hidden="true">
+                    <rect x="1" y="1" width="14" height="14" rx="7" fill="#08A0F7" stroke="#252836" stroke-width="2"/>
+                    <path d="M6.17157 8.32843L7.58579 9.74264L10.4142 6.91421" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <img src="images/img-7.svg" alt="author avatar" class="card__author-img">
+                </div>
+              </div>
+
+              <a href="#" class="card__title">Prepare for your first skateboard jump</a>
+              <span class="card__info">40K views • 2 weeks ago</span>
+            </div>
+          </div>
+
+          <div class="cards__card">
+            <div class="card__top">
+              <img src="images/img-12.svg" alt="card thumbnail" class="card__image">
+              <span class="card__time time-bagde">11 min</span>
+            </div>
+
+            <div class="card__body">
+              <div class="card__author">
+                <div class="card__author-name">
+                  Budi Hakim
+                  <span class="card__author-status"></span>
+                </div>
+
+                <div class="card__author-img-wrapper">
+                  <svg viewBox="0 0 16 16" fill="none" class="card__author-verified" aria-hidden="true">
+                    <rect x="1" y="1" width="14" height="14" rx="7" fill="#08A0F7" stroke="#252836" stroke-width="2"/>
+                    <path d="M6.17157 8.32843L7.58579 9.74264L10.4142 6.91421" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <img src="images/img-8.svg" alt="author avatar" class="card__author-img">
+                </div>
+              </div>
+
+              <a href="#" class="card__title">Tips to playing skateboard on the ramp</a>
+              <span class="card__info">35K views • 2 weeks ago</span>
+            </div>
+          </div>
+
+          <div class="cards__card">
+            <div class="card__top">
+              <img src="images/img-13.svg" alt="card thumbnail" class="card__image">
+              <span class="card__time time-bagde">15 min</span>
+            </div>
+
+            <div class="card__body">
+              <div class="card__author">
+                <div class="card__author-name">
+                  Wijaya Abadi
+                  <span class="card__author-status card__author-status--online"></span>
+                </div>
+
+                <div class="card__author-img-wrapper">
+                  <svg viewBox="0 0 16 16" fill="none" class="card__author-verified" aria-hidden="true">
+                    <rect x="1" y="1" width="14" height="14" rx="7" fill="#08A0F7" stroke="#252836" stroke-width="2"/>
+                    <path d="M6.17157 8.32843L7.58579 9.74264L10.4142 6.91421" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <img src="images/img-9.svg" alt="author avatar" class="card__author-img">
+                </div>
+              </div>
+
+              <a href="#" class="card__title">Tips to playing skateboard on the ramp</a>
+              <span class="card__info">30K views • 2 weeks ago</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
